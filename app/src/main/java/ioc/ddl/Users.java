@@ -7,14 +7,15 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class Serveis extends AppCompatActivity {
+public class Users extends AppCompatActivity {
 
     private Button crea, llistat, modificar, esborrar, torna;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_serveis);
+        setContentView(R.layout.activity_users);
 
         getSupportActionBar().hide();
 
@@ -35,6 +36,7 @@ public class Serveis extends AppCompatActivity {
             startActivity(i);
 
         });
+
 
     }
 

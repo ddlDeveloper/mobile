@@ -7,15 +7,14 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class Usuari extends AppCompatActivity {
+public class Services extends AppCompatActivity {
 
     private Button crea, llistat, modificar, esborrar, torna;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_usuari);
+        setContentView(R.layout.activity_services);
 
         getSupportActionBar().hide();
 
@@ -36,7 +35,6 @@ public class Usuari extends AppCompatActivity {
             startActivity(i);
 
         });
-
 
     }
 

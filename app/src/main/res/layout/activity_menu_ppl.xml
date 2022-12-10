@@ -16,19 +16,19 @@
         android:textSize="80sp"
         android:textStyle="bold"
         android:textColor="@color/white"
-        android:text="MENÚ"
+        android:text="MENU"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
     />
 
     <Button
-        android:id="@+id/reserves"
+        android:id="@+id/reservation"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:textSize="35sp"
         android:textColor="@color/black"
-        android:text="reserves"
+        android:text="reservation"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="190dp"
         android:layout_marginLeft="10dp"
@@ -38,32 +38,32 @@
     />
 
     <Button
-        android:id="@+id/descomptes"
+        android:id="@+id/discounts"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:textStyle="bold"
         android:textSize="35sp"
-        android:layout_below="@+id/reserves"
+        android:layout_below="@+id/reservation"
         android:textColor="@color/black"
         android:backgroundTint="#00BCD4"
-        android:text="descomptes"
+        android:text="discounts"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
     />
 
     <Button
-        android:id="@+id/serveis"
+        android:id="@+id/services"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
         android:textSize="35sp"
-        android:layout_below="@+id/descomptes"
+        android:layout_below="@+id/discounts"
         android:textColor="@color/black"
         android:backgroundTint="#00F90A"
-        android:text="serveis"
+        android:text="services"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
@@ -71,19 +71,19 @@
 
 
     <Button
-            android:id="@+id/usuaris"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textSize="35sp"
+        android:id="@+id/users"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="35sp"
         android:layout_centerHorizontal="true"
-            android:layout_below="@+id/serveis"
-            android:textColor="@color/black"
-            android:backgroundTint="@color/purple_500"
-            android:text="usuaris"
-            android:layout_marginTop="11dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
+        android:layout_below="@+id/services"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/purple_500"
+        android:text="users"
+        android:layout_marginTop="11dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
 
     <Button
         android:id="@+id/logout"
@@ -92,7 +92,7 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:textSize="35sp"
-        android:layout_below="@+id/usuaris"
+        android:layout_below="@+id/users"
         android:textColor="@color/black"
         android:backgroundTint="#F44336"
         android:text="log out"

@@ -7,14 +7,14 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class Descomptes extends AppCompatActivity {
+public class Discounts extends AppCompatActivity {
 
     private Button crea, llistat, modificar, esborrar, torna;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_descomptes);
+        setContentView(R.layout.activity_discounts);
 
         getSupportActionBar().hide();
 

@@ -16,14 +16,14 @@
             android:theme="@style/Theme.DDL"
             tools:targetApi="31">
         <activity
-                android:name=".Esborrar"
+                android:name=".Remove"
                 android:exported="false">
             <meta-data
                     android:name="android.app.lib_name"
                     android:value="" />
         </activity>
         <activity
-                android:name=".Modificar"
+                android:name=".Modify"
                 android:exported="false">
             <meta-data
                     android:name="android.app.lib_name"
@@ -37,35 +37,35 @@
                     android:value="" />
         </activity>
         <activity
-                android:name=".Crea"
+                android:name=".Create"
                 android:exported="false">
             <meta-data
                     android:name="android.app.lib_name"
                     android:value="" />
         </activity>
         <activity
-                android:name=".Usuari"
+                android:name=".Users"
                 android:exported="false">
             <meta-data
                     android:name="android.app.lib_name"
                     android:value="" />
         </activity>
         <activity
-                android:name=".Serveis"
+                android:name=".Services"
                 android:exported="false">
             <meta-data
                     android:name="android.app.lib_name"
                     android:value="" />
         </activity>
         <activity
-                android:name=".Descomptes"
+                android:name=".Discounts"
                 android:exported="false">
             <meta-data
                     android:name="android.app.lib_name"
                     android:value="" />
         </activity>
         <activity
-                android:name=".Reserva"
+                android:name=".Reservation"
                 android:exported="false">
             <meta-data
                     android:name="android.app.lib_name"

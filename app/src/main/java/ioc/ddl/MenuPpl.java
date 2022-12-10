@@ -29,35 +29,35 @@ public class MenuPpl extends AppCompatActivity {
         getSupportActionBar().hide();
 
         logout = findViewById(R.id.logout);
-        usuaris = findViewById(R.id.usuaris);
-        reserves = findViewById(R.id.reserves);
-        descomptes = findViewById(R.id.descomptes);
-        serveis = findViewById(R.id.serveis);
+        usuaris = findViewById(R.id.users);
+        reserves = findViewById(R.id.reservation);
+        descomptes = findViewById(R.id.discounts);
+        serveis = findViewById(R.id.services);
 
         reserves.setOnClickListener(v -> {
 
-            Intent i = new Intent(this, Reserva.class);
+            Intent i = new Intent(this, Reservation.class);
             startActivity(i);
 
         });
 
         descomptes.setOnClickListener(v -> {
 
-            Intent i = new Intent(this, Descomptes.class);
+            Intent i = new Intent(this, Discounts.class);
             startActivity(i);
 
         });
 
         serveis.setOnClickListener(v -> {
 
-            Intent i = new Intent(this, Serveis.class);
+            Intent i = new Intent(this, Services.class);
             startActivity(i);
 
         });
 
         usuaris.setOnClickListener(v -> {
 
-            Intent i = new Intent(this, Usuari.class);
+            Intent i = new Intent(this, Users.class);
             startActivity(i);
 
         });

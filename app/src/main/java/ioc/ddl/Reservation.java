@@ -7,14 +7,14 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class Reserva extends AppCompatActivity {
+public class Reservation extends AppCompatActivity {
 
     private Button crea, llistat, modificar, esborrar, torna;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reserva);
+        setContentView(R.layout.activity_reservation);
 
         getSupportActionBar().hide();
 
