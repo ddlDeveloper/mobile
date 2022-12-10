@@ -18,11 +18,11 @@ public class Reservation extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
-        crea = findViewById(R.id.crea);
-        llistat = findViewById(R.id.llistar);
-        modificar = findViewById(R.id.modificar);
-        esborrar = findViewById(R.id.esborrar);
-        torna = findViewById(R.id.torna);
+        crea = findViewById(R.id.create);
+        llistat = findViewById(R.id.list);
+        modificar = findViewById(R.id.alter);
+        esborrar = findViewById(R.id.remove);
+        torna = findViewById(R.id.back);
 
         crea.setOnClickListener(v -> Toast.makeText(this, "DBG", Toast.LENGTH_SHORT).show());
         llistat.setOnClickListener(v -> Toast.makeText(this, "DBG", Toast.LENGTH_SHORT).show());

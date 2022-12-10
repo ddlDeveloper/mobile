@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 public class Discounts extends AppCompatActivity {
 
-    private Button crea, llistat, modificar, esborrar, torna;
+    private Button create, list, alter, remove, back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,18 +18,18 @@ public class Discounts extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
-        crea = findViewById(R.id.crea);
-        llistat = findViewById(R.id.llistar);
-        modificar = findViewById(R.id.modificar);
-        esborrar = findViewById(R.id.esborrar);
-        torna = findViewById(R.id.torna);
+        create = findViewById(R.id.create);
+        list = findViewById(R.id.list);
+        alter = findViewById(R.id.alter);
+        remove = findViewById(R.id.remove);
+        back = findViewById(R.id.back);
 
-        crea.setOnClickListener(v -> Toast.makeText(this, "DBG", Toast.LENGTH_SHORT).show());
-        llistat.setOnClickListener(v -> Toast.makeText(this, "DBG", Toast.LENGTH_SHORT).show());
-        modificar.setOnClickListener(v -> Toast.makeText(this, "DBG", Toast.LENGTH_SHORT).show());
-        esborrar.setOnClickListener(v -> Toast.makeText(this, "DBG", Toast.LENGTH_SHORT).show());
+        create.setOnClickListener(v -> Toast.makeText(this, "DBG", Toast.LENGTH_SHORT).show());
+        list.setOnClickListener(v -> Toast.makeText(this, "DBG", Toast.LENGTH_SHORT).show());
+        alter.setOnClickListener(v -> Toast.makeText(this, "DBG", Toast.LENGTH_SHORT).show());
+        remove.setOnClickListener(v -> Toast.makeText(this, "DBG", Toast.LENGTH_SHORT).show());
 
-        torna.setOnClickListener(v -> {
+        back.setOnClickListener(v -> {
 
             Intent i = new Intent(this, MenuPpl.class);
             startActivity(i);
