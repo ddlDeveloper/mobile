@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Serveis">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="SERVEIS"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+    />
+
+    <Button
+            android:id="@+id/crea"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:text="crea"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="35dp"
+            android:layout_below="@+id/textView"
+            android:layout_marginTop="45dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/Green" />
+
+    <Button
+            android:id="@+id/llistar"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:text="llistat"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="35dp"
+            android:layout_below="@+id/crea"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/teal_200" />
+
+    <Button
+            android:id="@+id/modificar"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:text="modificar"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="35dp"
+            android:layout_below="@+id/llistar"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@android:color/holo_orange_dark" />
+
+    <Button
+            android:id="@+id/esborrar"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:text="esborrar"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="35dp"
+            android:layout_below="@+id/modificar"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#ff0" />
+
+    <Button
+            android:id="@+id/torna"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:text="torna"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="35dp"
+            android:layout_below="@+id/esborrar"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#ff00" />
+
+
+</RelativeLayout>
