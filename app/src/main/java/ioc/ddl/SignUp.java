@@ -70,6 +70,7 @@ public class SignUp extends AppCompatActivity {
 
             }
 
+
             @Override
             protected String doInBackground(String... strings) {
 
@@ -103,6 +104,7 @@ public class SignUp extends AppCompatActivity {
 
             }
 
+
             @Override
             protected void onPostExecute(String s) {
 
@@ -120,6 +122,18 @@ public class SignUp extends AppCompatActivity {
                 }
 
             }
+
+    }
+
+
+    public void saveUser() {
+
+        logIn.validaUsuari(user.getText().toString(), passwd.getText().toString());
+
+        if (usrValid) {
+            new Tasca().execute();
+
+        }
 
     }
 

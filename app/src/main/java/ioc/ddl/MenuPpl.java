@@ -5,21 +5,27 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.net.Socket;
 
 public class MenuPpl extends AppCompatActivity {
 
-    private Button logout = null, usuaris = null,
-            reserves = null, descomptes = null, serveis = null;
+    private String ip = "10.0.2.2";
+    private int port = 8000;
+
+
+    private Button usuaris, reserves, descomptes, serveis;
 
     String usr, passwd, id;
 
     DataInputStream dataInputStream;
     DataOutputStream dataOutputStream;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +34,15 @@ public class MenuPpl extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
-        logout = findViewById(R.id.logout);
         usuaris = findViewById(R.id.users);
         reserves = findViewById(R.id.reservation);
         descomptes = findViewById(R.id.discounts);
         serveis = findViewById(R.id.services);
+
+
+
+
+
 
         reserves.setOnClickListener(v -> {
 
@@ -62,87 +72,10 @@ public class MenuPpl extends AppCompatActivity {
 
         });
 
-        logout.setOnClickListener(v -> {
-
-            try {
-
-                dataOutputStream.writeInt(0);
-
-            }
-
-            catch (IOException e) {
-
-                e.printStackTrace();
-
-            }
-
-
-            MenuPpl.this.finish();
-
-            System.exit(0);
-
-        });
 
     }
 
-    class Tasca extends AsyncTask<String, Void, String> {
 
-        @Override
-        protected void onPreExecute() {
-
-            logout.setEnabled(false);
-        }
-
-        @Override
-        protected String doInBackground(String... strings) {
-
-            try {
-
-                /*Socket sc = new Socket("192.168.1.162", port);
-
-                DataInputStream in = new DataInputStream(sc.getInputStream());
-                DataOutputStream out = new DataOutputStream(sc.getOutputStream());
-
-                String resposta_svr = in.readUTF();
-
-                Log.i(TAG, resposta_svr);
-
-                out.writeUTF(usr);
-                out.writeUTF(passwd);
-                out.writeBoolean(false);
-
-                out.writeUTF("User disconnected");*/
-
-//                inputStream = new DataInputStream();
-//                outputStream = new DataOutputStream();
-
-                String resposta_svr = dataInputStream.readUTF();
-
-                dataOutputStream.writeUTF(usr);
-                dataOutputStream.writeUTF(passwd);
-                dataOutputStream.writeBoolean(false);
-
-                dataOutputStream.writeUTF("USER_EXIT");
-
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            return strings[0];
-        }
-
-        @Override
-        protected void onPostExecute(String s) {
-
-            Intent i = new Intent(MenuPpl.this, LogIn.class);
-
-            startActivity(i);
-
-
-        }
-
-    }
 
 
 }

@@ -16,10 +16,9 @@ import java.net.Socket;
 
 public class LogIn extends AppCompatActivity {
 
-
     private String ip = "10.0.2.2";
 
-    Button signUpBut, loginBtn;
+    Button signUpBut, logIn;
     EditText passwd, user;
 
     private int resposta_id;
@@ -38,26 +37,27 @@ public class LogIn extends AppCompatActivity {
         user = findViewById(R.id.user);
         passwd = findViewById(R.id.passwd);
 
-       loginBtn = findViewById(R.id.loginBtn);
+       logIn = findViewById(R.id.loginBtn);
         signUpBut = findViewById(R.id.signUpBtn);
 
         getSupportActionBar().hide();
 
-        signUpBut.setOnClickListener(v -> {
-
-            Intent i = new Intent(this, SignUp.class);
-            startActivity(i);
-
-        });
+        signUpBut.setOnClickListener(v ->
+                startActivity(new Intent(this, SignUp.class))
+        );
 
 
-        loginBtn.setOnClickListener(v -> {
+        logIn.setOnClickListener(v -> {
 
             validaUsuari(user.getText().toString(), passwd.getText().toString());
 
             if (usrValid) {
-                new Tasca().execute(user.getText().toString());
+
+                new Tasca().execute();
+                startActivity(new Intent(this, MenuPpl.class));
+
             }
+
 
         });
 
@@ -86,7 +86,7 @@ public class LogIn extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
 
-            loginBtn.setEnabled(false);
+            logIn.setEnabled(false);
         }
 
         @Override
@@ -123,7 +123,7 @@ public class LogIn extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
 
-            loginBtn.setEnabled(true);
+            logIn.setEnabled(true);
 
             if (resposta_id == 0) {
 

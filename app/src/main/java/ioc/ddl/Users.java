@@ -5,12 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class Users extends AppCompatActivity {
 
-    private Button crea, llistat, modificar, esborrar, torna;
-
+    private Button create, list, alter, remove, back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,24 +17,17 @@ public class Users extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
-        crea = findViewById(R.id.create);
-        llistat = findViewById(R.id.list);
-        modificar = findViewById(R.id.alter);
-        esborrar = findViewById(R.id.remove);
-        torna = findViewById(R.id.back);
+        create = findViewById(R.id.create);
+        list = findViewById(R.id.list);
+        alter = findViewById(R.id.alter);
+        remove = findViewById(R.id.remove);
+        back = findViewById(R.id.back);
 
-        crea.setOnClickListener(v -> Toast.makeText(this, "DBG", Toast.LENGTH_SHORT).show());
-        llistat.setOnClickListener(v -> Toast.makeText(this, "DBG", Toast.LENGTH_SHORT).show());
-        modificar.setOnClickListener(v -> Toast.makeText(this, "DBG", Toast.LENGTH_SHORT).show());
-        esborrar.setOnClickListener(v -> Toast.makeText(this, "DBG", Toast.LENGTH_SHORT).show());
-
-        torna.setOnClickListener(v -> {
-
-            Intent i = new Intent(this, MenuPpl.class);
-            startActivity(i);
-
-        });
-
+        create.setOnClickListener(v -> startActivity(new Intent(this, Create.class)));
+        list.setOnClickListener(v -> startActivity(new Intent(this, ListUsers.class)));
+        alter.setOnClickListener(v -> startActivity(new Intent(this, Alter.class)));
+        remove.setOnClickListener(v -> startActivity(new Intent(this, Remove.class)));
+        back.setOnClickListener(v -> startActivity(new Intent(this, MenuPpl.class)));
 
     }
 
