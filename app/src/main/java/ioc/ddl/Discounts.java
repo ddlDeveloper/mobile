@@ -31,7 +31,7 @@ public class Discounts extends AppCompatActivity {
 
         back.setOnClickListener(v -> {
 
-            Intent i = new Intent(this, MenuPpl.class);
+            Intent i = new Intent(this, MainMenu.class);
             startActivity(i);
 
         });

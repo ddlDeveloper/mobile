@@ -31,7 +31,7 @@ public class Reservation extends AppCompatActivity {
 
         torna.setOnClickListener(v -> {
 
-            Intent i = new Intent(this, MenuPpl.class);
+            Intent i = new Intent(this, MainMenu.class);
             startActivity(i);
 
         });

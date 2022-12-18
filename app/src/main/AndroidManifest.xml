@@ -95,7 +95,7 @@
             </intent-filter>
         </activity>
         <activity
-                android:name=".MenuPpl"
+                android:name=".MainMenu"
                 android:exported="false">
             <meta-data
                     android:name="android.app.lib_name"

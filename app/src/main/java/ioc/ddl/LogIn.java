@@ -16,13 +16,22 @@ import java.net.Socket;
 
 public class LogIn extends AppCompatActivity {
 
+    private int port = 8000;
     private String ip = "10.0.2.2";
 
-    Button signUpBut, logIn;
-    EditText passwd, user;
+    public int getPort() {
+
+        return port;
+    }
+    public String getIp() {
+
+        return ip;
+    }
+
+    private Button signUpBut, logIn;
+    private EditText passwd, user;
 
     private int resposta_id;
-    private int port = 8000;
 
     private boolean usrValid;
     private static final String TAG = "Resposta server: ";
@@ -42,9 +51,7 @@ public class LogIn extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
-        signUpBut.setOnClickListener(v ->
-                startActivity(new Intent(this, SignUp.class))
-        );
+        signUpBut.setOnClickListener(v -> startActivity(new Intent(this, SignUp.class)));
 
 
         logIn.setOnClickListener(v -> {
@@ -54,7 +61,7 @@ public class LogIn extends AppCompatActivity {
             if (usrValid) {
 
                 new Tasca().execute();
-                startActivity(new Intent(this, MenuPpl.class));
+                startActivity(new Intent(this, MainMenu.class));
 
             }
 
@@ -127,7 +134,7 @@ public class LogIn extends AppCompatActivity {
 
             if (resposta_id == 0) {
 
-                Intent i = new Intent(LogIn.this, MenuPpl.class);
+                Intent i = new Intent(LogIn.this, MainMenu.class);
                 i.putExtra("usr", user.getText().toString());
                 i.putExtra("passwd", passwd.getText().toString());
                 i.putExtra("id", String.valueOf(resposta_id));

@@ -27,7 +27,7 @@ public class Users extends AppCompatActivity {
         list.setOnClickListener(v -> startActivity(new Intent(this, ListUsers.class)));
         alter.setOnClickListener(v -> startActivity(new Intent(this, Alter.class)));
         remove.setOnClickListener(v -> startActivity(new Intent(this, Remove.class)));
-        back.setOnClickListener(v -> startActivity(new Intent(this, MenuPpl.class)));
+        back.setOnClickListener(v -> startActivity(new Intent(this, MainMenu.class)));
 
     }
 

@@ -22,10 +22,10 @@
 
 
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="NAME"
+        android:hint="user"
         android:background="@drawable/remove_underline_edit_text"
         android:textColor="@color/white"
         android:layout_below="@+id/textView"
@@ -37,33 +37,46 @@
 
 
     <EditText
-        android:id="@+id/user"
+        android:id="@+id/password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="USER"
+        android:hint="password"
         android:background="@drawable/remove_underline_edit_text"
         android:textColor="@color/white"
-        android:layout_below="@+id/date"
+        android:layout_below="@+id/user"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:textColorHint="@color/white"
         android:textSize="38sp"
     />
 
-    <EditText
-        android:id="@+id/date"
+    <Button
+        android:id="@+id/save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="DATE"
-        android:background="@drawable/remove_underline_edit_text"
-        android:textColor="@color/white"
-        android:layout_below="@+id/name"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:textColorHint="@color/white"
-        android:textSize="38sp"
+        android:text="save"
+        android:layout_marginLeft="100dp"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
     />
 
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="back"
+        android:textSize="30sp"
+        android:layout_toRightOf="@+id/save"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+
+    />
 
 
 </RelativeLayout>

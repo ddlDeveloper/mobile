@@ -16,7 +16,7 @@
             android:textSize="70sp"
             android:textStyle="bold"
             android:textColor="@color/purple_700"
-            android:text="REMOVE"
+            android:text="LIST"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="25dp" />
 
