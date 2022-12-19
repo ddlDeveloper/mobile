@@ -6,16 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
-public class Alter extends AppCompatActivity {
+public class RemoveUser extends AppCompatActivity {
 
     private Button back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_alter);
-
-        getSupportActionBar().hide();
+        setContentView(R.layout.activity_remove);
 
         getSupportActionBar().hide();
 

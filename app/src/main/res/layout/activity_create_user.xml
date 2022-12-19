@@ -7,7 +7,7 @@
     android:background="@color/black"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Create">
+    tools:context=".CreateUser">
 
     <TextView
         android:id="@+id/textView"
@@ -22,13 +22,14 @@
 
 
     <EditText
-        android:id="@+id/user"
+        android:id="@+id/DNI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="user"
+        android:hint="DNI"
         android:background="@drawable/remove_underline_edit_text"
         android:textColor="@color/white"
         android:layout_below="@+id/textView"
+        android:gravity="center"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:textColorHint="@color/white"
@@ -37,10 +38,27 @@
 
 
     <EditText
+        android:id="@+id/user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="user"
+        android:gravity="center"
+        android:background="@drawable/remove_underline_edit_text"
+        android:textColor="@color/white"
+        android:layout_below="@+id/DNI"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColorHint="@color/white"
+        android:textSize="38sp"
+    />
+
+    <EditText
         android:id="@+id/password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="password"
+        android:inputType="textPassword"
+        android:gravity="center"
         android:background="@drawable/remove_underline_edit_text"
         android:textColor="@color/white"
         android:layout_below="@+id/user"
@@ -49,6 +67,52 @@
         android:textColorHint="@color/white"
         android:textSize="38sp"
     />
+
+    <EditText
+        android:id="@+id/creditCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="credit card"
+        android:gravity="center"
+        android:background="@drawable/remove_underline_edit_text"
+        android:textColor="@color/white"
+        android:layout_below="@+id/password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColorHint="@color/white"
+        android:textSize="38sp"
+    />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="phone"
+        android:gravity="center"
+        android:background="@drawable/remove_underline_edit_text"
+        android:textColor="@color/white"
+        android:layout_below="@+id/creditCard"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColorHint="@color/white"
+        android:textSize="38sp"
+    />
+
+    <EditText
+        android:id="@+id/role"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="role"
+        android:gravity="center"
+        android:background="@drawable/remove_underline_edit_text"
+        android:textColor="@color/white"
+        android:layout_below="@+id/phone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColorHint="@color/white"
+        android:textSize="38sp"
+    />
+
 
     <Button
         android:id="@+id/save"

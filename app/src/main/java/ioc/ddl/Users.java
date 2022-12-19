@@ -23,10 +23,10 @@ public class Users extends AppCompatActivity {
         remove = findViewById(R.id.remove);
         back = findViewById(R.id.back);
 
-        create.setOnClickListener(v -> startActivity(new Intent(this, Create.class)));
+        create.setOnClickListener(v -> startActivity(new Intent(this, CreateUser.class)));
         list.setOnClickListener(v -> startActivity(new Intent(this, ListUsers.class)));
-        alter.setOnClickListener(v -> startActivity(new Intent(this, Alter.class)));
-        remove.setOnClickListener(v -> startActivity(new Intent(this, Remove.class)));
+        alter.setOnClickListener(v -> startActivity(new Intent(this, AlterUser.class)));
+        remove.setOnClickListener(v -> startActivity(new Intent(this, RemoveUser.class)));
         back.setOnClickListener(v -> startActivity(new Intent(this, MainMenu.class)));
 
     }

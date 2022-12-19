@@ -28,6 +28,18 @@ public class LogIn extends AppCompatActivity {
         return ip;
     }
 
+    private DataInputStream dataInputStream;
+    private DataOutputStream dataOutputStream;
+
+    public DataInputStream getDataInputStream() {
+
+        return dataInputStream;
+    }
+    public DataOutputStream getDataOutputStream() {
+
+        return dataOutputStream;
+    }
+
     private Button signUpBut, logIn;
     private EditText passwd, user;
 
@@ -46,13 +58,12 @@ public class LogIn extends AppCompatActivity {
         user = findViewById(R.id.user);
         passwd = findViewById(R.id.passwd);
 
-       logIn = findViewById(R.id.loginBtn);
+        logIn = findViewById(R.id.loginBtn);
         signUpBut = findViewById(R.id.signUpBtn);
 
         getSupportActionBar().hide();
 
         signUpBut.setOnClickListener(v -> startActivity(new Intent(this, SignUp.class)));
-
 
         logIn.setOnClickListener(v -> {
 
@@ -69,6 +80,7 @@ public class LogIn extends AppCompatActivity {
         });
 
     }
+
 
     public boolean validaUsuari(String usr, String pass) {
 
@@ -90,27 +102,16 @@ public class LogIn extends AppCompatActivity {
 
     class Tasca extends AsyncTask<String, Void, String> {
 
-        @Override
-        protected void onPreExecute() {
-
-            logIn.setEnabled(false);
-        }
 
         @Override
-        protected String doInBackground(String... strings) {
+        protected String doInBackground(String ... strings) {
 
             try {
 
-                Socket sc = new Socket(ip, port);
+                Socket socket = new Socket(ip, port);
 
-                DataInputStream dataInputStream = new DataInputStream(sc.getInputStream());
-                DataOutputStream dataOutputStream = new DataOutputStream(sc.getOutputStream());
-
-                String resposta_svr = dataInputStream.readUTF();
-
-                Log.i(TAG, resposta_svr);
-                Log.i(TAG, user.getText().toString());
-                Log.i(TAG, passwd.getText().toString());
+                dataInputStream = new DataInputStream(socket.getInputStream());
+                dataOutputStream = new DataOutputStream(socket.getOutputStream());
 
                 dataOutputStream.writeUTF(user.getText().toString());
                 dataOutputStream.writeUTF(passwd.getText().toString());
@@ -120,31 +121,16 @@ public class LogIn extends AppCompatActivity {
                 Log.i(TAG, "L'usuari té l'id assignat: " + resposta_id);
 
 
-            } catch (IOException e) {
+            }
+
+            catch (IOException e) {
                 e.printStackTrace();
             }
 
             return strings[0];
-        }
-
-        @Override
-        protected void onPostExecute(String s) {
-
-            logIn.setEnabled(true);
-
-            if (resposta_id == 0) {
-
-                Intent i = new Intent(LogIn.this, MainMenu.class);
-                i.putExtra("usr", user.getText().toString());
-                i.putExtra("passwd", passwd.getText().toString());
-                i.putExtra("id", String.valueOf(resposta_id));
-
-                startActivity(i);
-
-            }
 
         }
- 
+
     }
 
 }
