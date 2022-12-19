@@ -18,7 +18,7 @@ public class AlterUser extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_alter);
+        setContentView(R.layout.activity_alter_user);
 
         getSupportActionBar().hide();
 

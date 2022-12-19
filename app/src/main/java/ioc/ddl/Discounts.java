@@ -24,18 +24,13 @@ public class Discounts extends AppCompatActivity {
         remove = findViewById(R.id.remove);
         back = findViewById(R.id.back);
 
-        create.setOnClickListener(v -> Toast.makeText(this, "DBG", Toast.LENGTH_SHORT).show());
-        list.setOnClickListener(v -> Toast.makeText(this, "DBG", Toast.LENGTH_SHORT).show());
-        alter.setOnClickListener(v -> Toast.makeText(this, "DBG", Toast.LENGTH_SHORT).show());
-        remove.setOnClickListener(v -> Toast.makeText(this, "DBG", Toast.LENGTH_SHORT).show());
+        create.setOnClickListener(v -> startActivity(new Intent(this, CreateDiscount.class)));
+        list.setOnClickListener(v -> startActivity(new Intent(this, ListDiscounts.class)));
+        alter.setOnClickListener(v -> startActivity(new Intent(this, AlterDiscount.class)));
+        remove.setOnClickListener(v -> startActivity(new Intent(this, RemoveDiscount.class)));
+        back.setOnClickListener(v -> startActivity(new Intent(this, MainMenu.class)));
 
-        back.setOnClickListener(v -> {
-
-            Intent i = new Intent(this, MainMenu.class);
-            startActivity(i);
-
-        });
-
+        back.setOnClickListener(v -> startActivity(new Intent(this, Reservation.class)));
 
     }
 

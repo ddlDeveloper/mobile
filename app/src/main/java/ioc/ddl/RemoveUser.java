@@ -13,7 +13,7 @@ public class RemoveUser extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_remove);
+        setContentView(R.layout.activity_remove_user);
 
         getSupportActionBar().hide();
 

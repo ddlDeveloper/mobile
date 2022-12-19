@@ -71,35 +71,36 @@
 
 
     <Button
-            android:id="@+id/users"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textSize="35sp"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/services"
-            android:textColor="@color/black"
-            android:backgroundTint="@color/purple_500"
-            android:text="users"
-            android:layout_marginTop="11dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
+        android:id="@+id/users"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/services"
+        android:textColor="@color/black"
+        android:backgroundTint="#051288"
+        android:text="users"
+        android:layout_marginTop="11dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+    />
 
     <Button
-            android:id="@+id/logout"
-            android:layout_width="300dp"
-            android:layout_centerHorizontal="true"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textSize="35sp"
-            android:layout_below="@+id/users"
-            android:textColor="@color/black"
-            android:backgroundTint="#F44336"
-            android:text="log out"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            />
+        android:id="@+id/logout"
+        android:layout_width="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:layout_below="@+id/users"
+        android:textColor="@color/black"
+        android:backgroundTint="#F44336"
+        android:text="log out"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+    />
 
 
 

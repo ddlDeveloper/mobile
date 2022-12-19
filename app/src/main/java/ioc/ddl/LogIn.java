@@ -84,12 +84,28 @@ public class LogIn extends AppCompatActivity {
 
     public boolean validaUsuari(String usr, String pass) {
 
-        if (usr.isEmpty() || pass.isEmpty()) {
+        if (usr.isEmpty() && pass.isEmpty()) {
 
-            Toast.makeText(getApplicationContext(), "Introdueix usuari i contrasenya", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Introdueix usuari i contrassenya", Toast.LENGTH_LONG).show();
             usrValid = false;
 
-        } else {
+        }
+
+        else if (usr.isEmpty()) {
+
+            Toast.makeText(this, "Introdueix un usuari", Toast.LENGTH_SHORT).show();
+            usrValid = false;
+
+        }
+
+        else if (pass.isEmpty()) {
+
+            Toast.makeText(this, "Introdueix una contrassenya", Toast.LENGTH_SHORT).show();
+            usrValid = false;
+
+        }
+
+        else {
 
             usrValid = true;
 

@@ -1,5 +1,6 @@
 package ioc.ddl;
 
+
 import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,16 +17,19 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
 
+
 public class SignUp extends AppCompatActivity {
 
-    private LogIn logIn;
+    private DataInputStream dataInputStream;
+    private DataOutputStream dataOutputStream;
 
-    private int port = 8000;
+    private LogIn logIn = new LogIn();
+
     private int resposta_id;
-    private boolean usrValid;
-    private String ip = "10.0.2.2";
-    private Button back = null, save = null;
-    private EditText user = null, passwd = null;
+    private String ip = logIn.getIp();
+    private int port = logIn.getPort();
+    private Button back, save;
+    private EditText user, passwd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,90 +52,37 @@ public class SignUp extends AppCompatActivity {
         });
 
 
-        save.setOnClickListener(v -> {
-
-            logIn.validaUsuari(user.getText().toString(), passwd.getText().toString());
-
-            if (usrValid) {
-                new Tasca().execute(user.getText().toString());
-            }
-
-        });
+        save.setOnClickListener(v -> new Tasca().execute());
 
     }
-
 
     class Tasca extends AsyncTask<String, Void, String> {
 
-            @Override
-            protected void onPreExecute() {
 
-                save.setEnabled(false);
+        @Override
+        protected String doInBackground(String ... strings) {
 
-            }
+            try {
 
+                Socket socket = new Socket(ip, port);
 
-            @Override
-            protected String doInBackground(String... strings) {
+                dataInputStream = new DataInputStream(socket.getInputStream());
+                dataOutputStream = new DataOutputStream(socket.getOutputStream());
 
-                try {
+                dataOutputStream.writeUTF(user.getText().toString());
+                dataOutputStream.writeUTF(passwd.getText().toString());
+                dataOutputStream.writeInt(1);
 
-                    Socket socket = new Socket(ip, port);
-
-                    DataInputStream dataInputStream = new DataInputStream(socket.getInputStream());
-                    DataOutputStream dataOutputStream = new DataOutputStream(socket.getOutputStream());
-
-                    String resposta_svr = dataInputStream.readUTF();
-
-                    Log.i(TAG, resposta_svr);
-                    Log.i(TAG, user.getText().toString());
-                    Log.i(TAG, passwd.getText().toString());
-
-                    dataOutputStream.writeInt(1);
-                    dataOutputStream.writeUTF(user.getText().toString());
-                    dataOutputStream.writeUTF(passwd.getText().toString());
-
-                    resposta_id = dataInputStream.readInt();
-                    Log.i(TAG, "L'usuari té l'id assignat: " + resposta_id);
-
-                }
-
-                catch (IOException e) {
-                    e.printStackTrace();
-                }
-
-                return strings[0];
+                resposta_id = dataInputStream.readInt();
+                Log.i(TAG, "L'usuari té l'id assignat: " + resposta_id);
 
             }
 
-
-            @Override
-            protected void onPostExecute(String s) {
-
-                save.setEnabled(true);
-
-                if (resposta_id == 0) {
-
-                    Intent i = new Intent(SignUp.this, LogIn.class);
-                    i.putExtra("usr", user.getText().toString());
-                    i.putExtra("passwd", passwd.getText().toString());
-                    i.putExtra("id", String.valueOf(resposta_id));
-
-                    startActivity(i);
-
-                }
-
+            catch (IOException e) {
+                e.printStackTrace();
             }
 
-    }
-
-
-    public void saveUser() {
-
-        logIn.validaUsuari(user.getText().toString(), passwd.getText().toString());
-
-        if (usrValid) {
-            new Tasca().execute();
+            return strings[0];
 
         }
 

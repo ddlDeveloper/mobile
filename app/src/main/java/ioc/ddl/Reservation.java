@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 public class Reservation extends AppCompatActivity {
 
-    private Button crea, llistat, modificar, esborrar, torna;
+    private Button create, list, alter, remove, back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,18 +18,18 @@ public class Reservation extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
-        crea = findViewById(R.id.create);
-        llistat = findViewById(R.id.list);
-        modificar = findViewById(R.id.alter);
-        esborrar = findViewById(R.id.remove);
-        torna = findViewById(R.id.back);
+        create = findViewById(R.id.create);
+        list = findViewById(R.id.list);
+        alter = findViewById(R.id.alter);
+        remove = findViewById(R.id.remove);
+        back = findViewById(R.id.back);
 
-        crea.setOnClickListener(v -> Toast.makeText(this, "DBG", Toast.LENGTH_SHORT).show());
-        llistat.setOnClickListener(v -> Toast.makeText(this, "DBG", Toast.LENGTH_SHORT).show());
-        modificar.setOnClickListener(v -> Toast.makeText(this, "DBG", Toast.LENGTH_SHORT).show());
-        esborrar.setOnClickListener(v -> Toast.makeText(this, "DBG", Toast.LENGTH_SHORT).show());
+        create.setOnClickListener(v -> startActivity(new Intent(this, CreateReservation.class)));
+        list.setOnClickListener(v -> startActivity(new Intent(this, ListReservations.class)));
+        alter.setOnClickListener(v -> startActivity(new Intent(this, AlterReservation.class)));
+        remove.setOnClickListener(v -> startActivity(new Intent(this, RemoveReservation.class)));
 
-        torna.setOnClickListener(v -> {
+        back.setOnClickListener(v -> {
 
             Intent i = new Intent(this, MainMenu.class);
             startActivity(i);
