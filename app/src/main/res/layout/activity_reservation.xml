@@ -36,20 +36,6 @@
     />
 
     <Button
-        android:id="@+id/list"
-        android:layout_width="260dp"
-        android:layout_height="wrap_content"
-        android:text="list"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="35dp"
-        android:layout_below="@+id/create"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"
-        android:backgroundTint="@color/teal_200"
-    />
-
-    <Button
         android:id="@+id/alter"
         android:layout_width="260dp"
         android:layout_height="wrap_content"
@@ -57,7 +43,7 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="35dp"
-        android:layout_below="@+id/list"
+        android:layout_below="@+id/create"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
         android:backgroundTint="@android:color/holo_orange_dark"

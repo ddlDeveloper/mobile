@@ -10,57 +10,51 @@
         tools:context=".CreateDiscount">
 
     <TextView
-            android:id="@+id/textView"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="70sp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_700"
+        android:text="CREATE"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="215dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/percentatge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="70sp"
-            android:textStyle="bold"
-            android:textColor="@color/purple_700"
-            android:text="CREATE"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="25dp" />
-
-
-    <EditText
-            android:id="@+id/user"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="user"
-            android:background="@drawable/remove_underline_edit_text"
-            android:textColor="@color/white"
-            android:layout_below="@+id/textView"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            android:textColorHint="@color/white"
-            android:textSize="38sp"
-            />
-
-
-    <EditText
-            android:id="@+id/password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="password"
+            android:hint="New Discount %"
             android:background="@drawable/remove_underline_edit_text"
             android:textColor="@color/white"
             android:layout_below="@+id/user"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/newDiscount"
             android:textColorHint="@color/white"
             android:textSize="38sp"
-            />
+        />
+
+    </LinearLayout>
 
     <Button
             android:id="@+id/save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout"
             android:text="save"
-            android:layout_marginLeft="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="90dp"
             android:textSize="30sp"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="20dp"
             />
 
     <Button
@@ -69,12 +63,12 @@
             android:layout_height="wrap_content"
             android:text="back"
             android:textSize="30sp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/linearLayout"
             android:layout_toRightOf="@+id/save"
             android:layout_marginLeft="20dp"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="20dp"
 
             />
 

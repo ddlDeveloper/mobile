@@ -15,6 +15,7 @@ public class AlterUser extends AppCompatActivity {
     private int port = logIn.getPort();
     private String ip = logIn.getIp();
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

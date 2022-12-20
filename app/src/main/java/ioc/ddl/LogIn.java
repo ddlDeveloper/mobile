@@ -48,7 +48,6 @@ public class LogIn extends AppCompatActivity {
     private boolean usrValid;
     private static final String TAG = "Resposta server: ";
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -76,7 +75,6 @@ public class LogIn extends AppCompatActivity {
 
             }
 
-
         });
 
     }
@@ -85,28 +83,24 @@ public class LogIn extends AppCompatActivity {
     public boolean validaUsuari(String usr, String pass) {
 
         if (usr.isEmpty() && pass.isEmpty()) {
-
             Toast.makeText(getApplicationContext(), "Introdueix usuari i contrassenya", Toast.LENGTH_LONG).show();
             usrValid = false;
 
         }
 
         else if (usr.isEmpty()) {
-
             Toast.makeText(this, "Introdueix un usuari", Toast.LENGTH_SHORT).show();
             usrValid = false;
 
         }
 
         else if (pass.isEmpty()) {
-
             Toast.makeText(this, "Introdueix una contrassenya", Toast.LENGTH_SHORT).show();
             usrValid = false;
 
         }
 
         else {
-
             usrValid = true;
 
         }
@@ -135,7 +129,6 @@ public class LogIn extends AppCompatActivity {
 
                 resposta_id = dataInputStream.readInt();
                 Log.i(TAG, "L'usuari té l'id assignat: " + resposta_id);
-
 
             }
 

@@ -23,20 +23,6 @@
                     android:value="" />
         </activity>
         <activity
-                android:name=".ListServices"
-                android:exported="false">
-            <meta-data
-                    android:name="android.app.lib_name"
-                    android:value="" />
-        </activity>
-        <activity
-                android:name=".ListDiscounts"
-                android:exported="false">
-            <meta-data
-                    android:name="android.app.lib_name"
-                    android:value="" />
-        </activity>
-        <activity
                 android:name=".RemoveDiscount"
                 android:exported="false">
             <meta-data
@@ -45,13 +31,6 @@
         </activity>
         <activity
                 android:name=".AlterDiscount"
-                android:exported="false">
-            <meta-data
-                    android:name="android.app.lib_name"
-                    android:value="" />
-        </activity>
-        <activity
-                android:name=".ListReservations"
                 android:exported="false">
             <meta-data
                     android:name="android.app.lib_name"
@@ -122,13 +101,6 @@
         </activity>
         <activity
                 android:name=".AlterUser"
-                android:exported="false">
-            <meta-data
-                    android:name="android.app.lib_name"
-                    android:value="" />
-        </activity>
-        <activity
-                android:name=".ListUsers"
                 android:exported="false">
             <meta-data
                     android:name="android.app.lib_name"

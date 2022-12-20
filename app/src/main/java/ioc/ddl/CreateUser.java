@@ -38,7 +38,7 @@ public class CreateUser extends AppCompatActivity {
 
         DNI = findViewById(R.id.DNI);
         user = findViewById(R.id.user);
-        password = findViewById(R.id.password);
+        password = findViewById(R.id.startingDate);
         creditCard = findViewById(R.id.creditCard);
         phone = findViewById(R.id.phone);
         role = findViewById(R.id.role);

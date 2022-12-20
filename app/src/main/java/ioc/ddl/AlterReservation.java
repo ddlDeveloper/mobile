@@ -1,10 +1,12 @@
 package ioc.ddl;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+
 
 public class AlterReservation extends AppCompatActivity {
 
@@ -15,11 +17,12 @@ public class AlterReservation extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alter_reservation);
 
-        back = findViewById(R.id.back);
-
         getSupportActionBar().hide();
 
-        back.setOnClickListener(v -> new Intent(this, Reservation.class));
+
+        back = findViewById(R.id.back);
+
+        back.setOnClickListener(v -> startActivity(new Intent(this, Reservation.class)));
 
 
     }

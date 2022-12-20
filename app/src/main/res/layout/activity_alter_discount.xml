@@ -7,7 +7,7 @@
         android:background="@color/black"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".AlterUser">
+        tools:context=".AlterDiscount">
 
     <TextView
             android:id="@+id/textView"
@@ -18,49 +18,68 @@
             android:textColor="@color/purple_700"
             android:text="ALTER"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="25dp" />
+            android:layout_marginTop="205dp" />
 
-
-    <EditText
-            android:id="@+id/user"
+    <LinearLayout
+            android:id="@+id/lnearLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="user"
-            android:background="@drawable/remove_underline_edit_text"
-            android:textColor="@color/white"
             android:layout_below="@+id/textView"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            android:textColorHint="@color/white"
-            android:textSize="38sp"
-            />
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
 
 
-    <EditText
-            android:id="@+id/password"
+        <EditText
+                android:id="@+id/oldDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Discount to Alter %"
+                android:background="@drawable/remove_underline_edit_text"
+                android:textColor="@color/white"
+                android:layout_below="@+id/user"
+                android:layout_toRightOf="@+id/newDiscount"
+                android:layout_marginTop="25dp"
+                android:textColorHint="@color/white"
+                android:textSize="38sp"
+                />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="password"
-            android:background="@drawable/remove_underline_edit_text"
-            android:textColor="@color/white"
-            android:layout_below="@+id/user"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:textColorHint="@color/white"
-            android:textSize="38sp"
-            />
+            android:layout_below="@+id/lnearLayout"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+        <EditText
+                android:id="@+id/newPercentatge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="New Discount %"
+                android:background="@drawable/remove_underline_edit_text"
+                android:textColor="@color/white"
+                android:layout_below="@+id/user"
+                android:layout_toRightOf="@+id/newDiscount"
+                android:layout_marginTop="25dp"
+                android:textColorHint="@color/white"
+                android:textSize="38sp"
+                />
+
+    </LinearLayout>
 
     <Button
             android:id="@+id/save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout"
             android:text="save"
             android:layout_marginLeft="100dp"
             android:textSize="30sp"
+            android:layout_marginTop="20dp"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="20dp"
             />
 
     <Button
@@ -69,12 +88,12 @@
             android:layout_height="wrap_content"
             android:text="back"
             android:textSize="30sp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/linearLayout"
             android:layout_toRightOf="@+id/save"
             android:layout_marginLeft="20dp"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="20dp"
 
             />
 
